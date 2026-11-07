@@ -10,33 +10,116 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CentreAffairesRouteImport } from './routes/centre-affaires'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as NettoyageRouteImport } from './routes/nettoyage'
+import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
+import { Route as RenovationRouteImport } from './routes/renovation'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CentreAffairesRoute = CentreAffairesRouteImport.update({
+  id: '/centre-affaires',
+  path: '/centre-affaires',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NettoyageRoute = NettoyageRouteImport.update({
+  id: '/nettoyage',
+  path: '/nettoyage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitiqueDeConfidentialiteRoute =
+  PolitiqueDeConfidentialiteRouteImport.update({
+    id: '/politique-de-confidentialite',
+    path: '/politique-de-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RenovationRoute = RenovationRouteImport.update({
+  id: '/renovation',
+  path: '/renovation',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/centre-affaires': typeof CentreAffairesRoute
+  '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/nettoyage': typeof NettoyageRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/renovation': typeof RenovationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/centre-affaires': typeof CentreAffairesRoute
+  '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/nettoyage': typeof NettoyageRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/renovation': typeof RenovationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/centre-affaires': typeof CentreAffairesRoute
+  '/contact': typeof ContactRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/nettoyage': typeof NettoyageRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/renovation': typeof RenovationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/centre-affaires'
+    | '/contact'
+    | '/mentions-legales'
+    | '/nettoyage'
+    | '/politique-de-confidentialite'
+    | '/renovation'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/centre-affaires'
+    | '/contact'
+    | '/mentions-legales'
+    | '/nettoyage'
+    | '/politique-de-confidentialite'
+    | '/renovation'
+  id:
+    | '__root__'
+    | '/'
+    | '/centre-affaires'
+    | '/contact'
+    | '/mentions-legales'
+    | '/nettoyage'
+    | '/politique-de-confidentialite'
+    | '/renovation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CentreAffairesRoute: typeof CentreAffairesRoute
+  ContactRoute: typeof ContactRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  NettoyageRoute: typeof NettoyageRoute
+  PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
+  RenovationRoute: typeof RenovationRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +131,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/centre-affaires': {
+      id: '/centre-affaires'
+      path: '/centre-affaires'
+      fullPath: '/centre-affaires'
+      preLoaderRoute: typeof CentreAffairesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nettoyage': {
+      id: '/nettoyage'
+      path: '/nettoyage'
+      fullPath: '/nettoyage'
+      preLoaderRoute: typeof NettoyageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politique-de-confidentialite': {
+      id: '/politique-de-confidentialite'
+      path: '/politique-de-confidentialite'
+      fullPath: '/politique-de-confidentialite'
+      preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/renovation': {
+      id: '/renovation'
+      path: '/renovation'
+      fullPath: '/renovation'
+      preLoaderRoute: typeof RenovationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CentreAffairesRoute: CentreAffairesRoute,
+  ContactRoute: ContactRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  NettoyageRoute: NettoyageRoute,
+  PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
+  RenovationRoute: RenovationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
