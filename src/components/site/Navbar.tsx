@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/amj-logo.png.asset.json";
+import { assetUrl } from "@/lib/company";
 import { useI18n, LANGS } from "@/lib/i18n";
 
 export function Navbar() {
@@ -43,7 +44,7 @@ export function Navbar() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "glass-light py-2 shadow-luxe" : "bg-background/95 py-3"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6">
         <Link to="/" className="shrink-0">
-          <img src={logo.url} alt="AMJ+ Srl" className="h-12 w-auto md:h-14" />
+          <img src={assetUrl(logo.url)} alt="AMJ+ Srl" className="h-12 w-auto md:h-14" />
         </Link>
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map((l) => (

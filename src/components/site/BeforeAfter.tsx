@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { MoveHorizontal } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
-export function BeforeAfter({ image, beforeImage }: { image: string; beforeImage?: string }) {
+export function BeforeAfter({ image, beforeImage, diptych = false }: { image: string; beforeImage?: string; diptych?: boolean }) {
   const { t } = useI18n();
   const [pos, setPos] = useState(50);
   const ref = useRef<HTMLDivElement>(null);
@@ -18,18 +18,19 @@ export function BeforeAfter({ image, beforeImage }: { image: string; beforeImage
     <div
       ref={ref}
       dir="ltr"
-      className="relative aspect-[16/9] w-full cursor-ew-resize select-none overflow-hidden rounded-3xl shadow-luxe"
+      className="relative aspect-[4/3] w-full cursor-ew-resize touch-pan-y select-none overflow-hidden rounded-lg shadow-luxe"
       onPointerDown={(e) => { dragging.current = true; move(e.clientX); }}
       onPointerMove={(e) => dragging.current && move(e.clientX)}
       onPointerUp={() => (dragging.current = false)}
       onPointerLeave={() => (dragging.current = false)}
     >
-      <img src={image} alt={t.common.after} className="absolute inset-0 h-full w-full object-cover" draggable={false} />
+      <img src={image} alt={t.common.after} loading="lazy" className={`absolute inset-y-0 h-full max-w-none object-cover ${diptych ? "right-0 w-[200%]" : "inset-x-0 w-full"}`} draggable={false} />
       <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
         <img
           src={beforeImage ?? image}
           alt={t.common.before}
-          className="absolute inset-0 h-full w-full object-cover"
+          className={`absolute inset-y-0 h-full max-w-none object-cover ${diptych ? "left-0 w-[200%]" : "inset-x-0 w-full"}`}
+          loading="lazy"
           style={beforeImage ? undefined : { filter: "grayscale(0.85) sepia(0.45) brightness(0.62) contrast(0.85) blur(1px)" }}
           draggable={false}
         />

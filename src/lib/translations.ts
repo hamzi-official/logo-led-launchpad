@@ -4,6 +4,7 @@ const fr = {
   nav: { home: "Accueil", business: "Centre d'Affaires", cleaning: "Nettoyage", renovation: "Rénovation", contact: "Contact", cta: "Devis Gratuit" },
   slogan: "Votre partenaire pour la réussite de vos projets — Un service complet pour votre activité en Belgique",
   common: {
+    close: "Fermer", illustration: "Illustrations de transformations possibles — photos non contractuelles.",
     discover: "Découvrir nos services", whatsapp: "WhatsApp direct", request: "Demander ce service", learnMore: "En savoir plus",
     quote: "Demander un devis gratuit", before: "Avant", after: "Après", compliant: "100% Conforme en Belgique", vatLabel: "BCE",
     getStarted: "Parlons de votre projet", getStartedSub: "Réponse rapide, devis gratuit et sans engagement.",
@@ -58,10 +59,11 @@ const fr = {
       { title: "Rénovation Cuisines & Salles de Bain", desc: "Des espaces modernes, fonctionnels et élégants, conçus selon vos envies." },
       { title: "Isolation, Électricité & Plomberie", desc: "Travaux techniques réalisés selon les normes belges en vigueur." },
     ] as Item[],
-    galleryTitle: "Nos réalisations", baTitle: "Avant / Après",
+    galleryTitle: "Exemples de rénovation", baTitle: "Avant / Après",
     gallery: ["Salon contemporain", "Cuisine sur mesure", "Salle de bain", "Façade rénovée", "Peinture & finitions", "Chantier en cours"],
   },
   contact: {
+    mapLoad: "Charger Google Maps", mapNote: "Google Maps est un service externe. Son chargement transmet votre adresse IP à Google.",
     eyebrow: "Contact & Devis", title: "Parlons de votre projet",
     sub: "Contactez-nous directement ou remplissez le formulaire : nous vous répondons rapidement.",
     manager: "Gérance", phone: "Téléphone", whatsapp: "WhatsApp", email: "E-mail", address: "Adresse",
@@ -74,7 +76,7 @@ const fr = {
     msgIntro: "Bonjour AMJ+ Srl, je souhaite un devis.",
   },
   cookie: {
-    text: "Nous utilisons des cookies pour améliorer votre expérience. Vous pouvez accepter, refuser ou personnaliser vos choix.",
+    text: "Ce site conserve uniquement vos préférences de langue et de consentement. Aucun outil analytique ni publicitaire n’est activé. Google Maps se charge uniquement à votre demande.",
     accept: "Tout accepter", refuse: "Refuser", customize: "Personnaliser", save: "Enregistrer",
     necessary: "Cookies nécessaires (toujours actifs)", analytics: "Cookies analytiques", marketing: "Cookies marketing", policy: "Politique de confidentialité",
   },
@@ -83,7 +85,7 @@ const fr = {
     title: "Mentions légales",
     sections: [
       { title: "Éditeur du site", desc: "Le présent site est édité par la société AMJ+ Srl, société à responsabilité limitée de droit belge." },
-      { title: "Hébergement", desc: "Le site est hébergé par un prestataire professionnel garantissant sa disponibilité et sa sécurité." },
+      { title: "Hébergement", desc: "Le site est conçu pour être publié sur GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis). Le prestataire effectif dépend du lieu de publication." },
       { title: "Propriété intellectuelle", desc: "L'ensemble des contenus (textes, logo, images) est protégé. Toute reproduction sans autorisation écrite est interdite." },
       { title: "Responsabilité", desc: "AMJ+ Srl s'efforce de fournir des informations exactes mais ne peut être tenue responsable d'éventuelles erreurs ou omissions." },
       { title: "Droit applicable", desc: "Le présent site est soumis au droit belge. Tout litige relève des tribunaux compétents de Bruxelles." },
@@ -91,6 +93,8 @@ const fr = {
     labels: { company: "Dénomination", vat: "N° d'entreprise / TVA", seat: "Siège social", manager: "Responsable", email: "E-mail", phone: "Téléphone" },
   },
   privacy: {
+    authority: "Autorité de protection des données (Belgique)",
+    extra: [{"title": "Base juridique et destinataires", "desc": "Les demandes de devis sont traitées pour préparer un contrat (article 6.1.b RGPD). Votre consentement autorise le partage choisi avec WhatsApp/Meta ou votre fournisseur de messagerie. Le formulaire ne conserve pas vos données sur ce site. Ces prestataires peuvent traiter des données hors EEE selon leurs propres garanties et politiques."}, {"title": "Demandes et délais", "desc": "Contactez-nous par e-mail pour accéder, rectifier ou supprimer vos données, limiter leur traitement, vous opposer ou retirer votre consentement. Nous répondons normalement dans un mois. Les informations liées à un contrat restent soumises aux obligations légales de conservation."}],
     title: "Politique de confidentialité",
     sections: [
       { title: "Responsable du traitement", desc: "AMJ+ Srl est responsable du traitement de vos données personnelles conformément au RGPD (Règlement UE 2016/679)." },
@@ -110,6 +114,7 @@ const nl: Dict = {
   nav: { home: "Home", business: "Bedrijvencentrum", cleaning: "Schoonmaak", renovation: "Renovatie", contact: "Contact", cta: "Gratis Offerte" },
   slogan: "Uw partner voor het succes van uw projecten — Een complete service voor uw activiteit in België",
   common: {
+    close: "Sluiten", illustration: "Illustraties van mogelijke transformaties — niet-contractuele foto’s.",
     discover: "Ontdek onze diensten", whatsapp: "Direct WhatsApp", request: "Deze dienst aanvragen", learnMore: "Meer info",
     quote: "Gratis offerte aanvragen", before: "Voor", after: "Na", compliant: "100% Conform in België", vatLabel: "KBO",
     getStarted: "Laten we over uw project praten", getStartedSub: "Snel antwoord, gratis en vrijblijvende offerte.",
@@ -164,10 +169,11 @@ const nl: Dict = {
       { title: "Renovatie Keukens & Badkamers", desc: "Moderne, functionele en elegante ruimtes, ontworpen naar uw wensen." },
       { title: "Isolatie, Elektriciteit & Sanitair", desc: "Technische werken volgens de geldende Belgische normen." },
     ],
-    galleryTitle: "Onze realisaties", baTitle: "Voor / Na",
+    galleryTitle: "Renovatievoorbeelden", baTitle: "Voor / Na",
     gallery: ["Hedendaagse woonkamer", "Keuken op maat", "Badkamer", "Gerenoveerde gevel", "Schilderwerk & afwerking", "Lopende werf"],
   },
   contact: {
+    mapLoad: "Google Maps laden", mapNote: "Google Maps is een externe dienst. Bij het laden wordt uw IP-adres met Google gedeeld.",
     eyebrow: "Contact & Offerte", title: "Laten we over uw project praten",
     sub: "Neem rechtstreeks contact op of vul het formulier in: wij antwoorden snel.",
     manager: "Zaakvoering", phone: "Telefoon", whatsapp: "WhatsApp", email: "E-mail", address: "Adres",
@@ -180,7 +186,7 @@ const nl: Dict = {
     msgIntro: "Hallo AMJ+ Srl, ik wens een offerte.",
   },
   cookie: {
-    text: "Wij gebruiken cookies om uw ervaring te verbeteren. U kunt accepteren, weigeren of uw keuzes aanpassen.",
+    text: "Deze site bewaart alleen taal- en toestemmingsvoorkeuren. Er zijn geen analyse- of advertentietools actief. Google Maps wordt alleen op uw verzoek geladen.",
     accept: "Alles accepteren", refuse: "Weigeren", customize: "Aanpassen", save: "Opslaan",
     necessary: "Noodzakelijke cookies (altijd actief)", analytics: "Analytische cookies", marketing: "Marketingcookies", policy: "Privacybeleid",
   },
@@ -189,7 +195,7 @@ const nl: Dict = {
     title: "Wettelijke vermeldingen",
     sections: [
       { title: "Uitgever van de website", desc: "Deze website wordt uitgegeven door AMJ+ Srl, een besloten vennootschap naar Belgisch recht." },
-      { title: "Hosting", desc: "De website wordt gehost door een professionele dienstverlener die beschikbaarheid en veiligheid garandeert." },
+      { title: "Hosting", desc: "De site is ontworpen voor publicatie op GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, Verenigde Staten). De daadwerkelijke provider hangt af van de publicatie." },
       { title: "Intellectuele eigendom", desc: "Alle inhoud (teksten, logo, afbeeldingen) is beschermd. Reproductie zonder schriftelijke toestemming is verboden." },
       { title: "Aansprakelijkheid", desc: "AMJ+ Srl streeft naar correcte informatie maar kan niet aansprakelijk worden gesteld voor eventuele fouten of weglatingen." },
       { title: "Toepasselijk recht", desc: "Deze website is onderworpen aan het Belgisch recht. Geschillen vallen onder de bevoegde rechtbanken van Brussel." },
@@ -197,6 +203,8 @@ const nl: Dict = {
     labels: { company: "Benaming", vat: "Ondernemings- / btw-nummer", seat: "Maatschappelijke zetel", manager: "Verantwoordelijke", email: "E-mail", phone: "Telefoon" },
   },
   privacy: {
+    authority: "Gegevensbeschermingsautoriteit (België)",
+    extra: [{"title": "Rechtsgrond en ontvangers", "desc": "Offerteaanvragen worden verwerkt ter voorbereiding van een overeenkomst (artikel 6.1.b AVG). Uw toestemming staat de gekozen overdracht naar WhatsApp/Meta of uw e-mailprovider toe. Dit formulier slaat geen gegevens op deze site op. Deze providers kunnen gegevens buiten de EER verwerken volgens hun eigen waarborgen en beleid."}, {"title": "Verzoeken en termijnen", "desc": "Neem per e-mail contact op voor inzage, correctie, verwijdering, beperking, bezwaar of intrekking van toestemming. Wij antwoorden normaal binnen een maand. Contractgegevens blijven onderworpen aan wettelijke bewaarplichten."}],
     title: "Privacybeleid",
     sections: [
       { title: "Verwerkingsverantwoordelijke", desc: "AMJ+ Srl is verantwoordelijk voor de verwerking van uw persoonsgegevens conform de AVG (Verordening EU 2016/679)." },
@@ -214,6 +222,7 @@ const en: Dict = {
   nav: { home: "Home", business: "Business Center", cleaning: "Cleaning", renovation: "Renovation", contact: "Contact", cta: "Free Quote" },
   slogan: "Your partner for the success of your projects — A complete service for your business in Belgium",
   common: {
+    close: "Close", illustration: "Illustrations of possible transformations — illustrative photography.",
     discover: "Discover our services", whatsapp: "WhatsApp us", request: "Request this service", learnMore: "Learn more",
     quote: "Request a free quote", before: "Before", after: "After", compliant: "100% Compliant in Belgium", vatLabel: "CBE",
     getStarted: "Let's talk about your project", getStartedSub: "Fast reply, free and no-obligation quote.",
@@ -268,10 +277,11 @@ const en: Dict = {
       { title: "Kitchen & Bathroom Renovation", desc: "Modern, functional and elegant spaces designed around your wishes." },
       { title: "Insulation, Electrical & Plumbing", desc: "Technical works carried out to current Belgian standards." },
     ],
-    galleryTitle: "Our projects", baTitle: "Before / After",
+    galleryTitle: "Renovation inspiration", baTitle: "Before / After",
     gallery: ["Contemporary living room", "Custom kitchen", "Bathroom", "Renovated façade", "Painting & finishes", "Work in progress"],
   },
   contact: {
+    mapLoad: "Load Google Maps", mapNote: "Google Maps is an external service. Loading it shares your IP address with Google.",
     eyebrow: "Contact & Quote", title: "Let's talk about your project",
     sub: "Contact us directly or fill in the form: we reply quickly.",
     manager: "Management", phone: "Phone", whatsapp: "WhatsApp", email: "Email", address: "Address",
@@ -284,7 +294,7 @@ const en: Dict = {
     msgIntro: "Hello AMJ+ Srl, I would like a quote.",
   },
   cookie: {
-    text: "We use cookies to improve your experience. You can accept, refuse or customise your choices.",
+    text: "This site stores only language and consent preferences. No analytics or advertising tools are active. Google Maps loads only at your request.",
     accept: "Accept all", refuse: "Refuse", customize: "Customise", save: "Save",
     necessary: "Necessary cookies (always active)", analytics: "Analytics cookies", marketing: "Marketing cookies", policy: "Privacy policy",
   },
@@ -293,7 +303,7 @@ const en: Dict = {
     title: "Legal notice",
     sections: [
       { title: "Website publisher", desc: "This website is published by AMJ+ Srl, a private limited company under Belgian law." },
-      { title: "Hosting", desc: "The website is hosted by a professional provider ensuring its availability and security." },
+      { title: "Hosting", desc: "The site is designed for GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States). The actual provider depends on where it is published." },
       { title: "Intellectual property", desc: "All content (texts, logo, images) is protected. Any reproduction without written permission is prohibited." },
       { title: "Liability", desc: "AMJ+ Srl strives to provide accurate information but cannot be held liable for any errors or omissions." },
       { title: "Applicable law", desc: "This website is governed by Belgian law. Any dispute falls under the competent courts of Brussels." },
@@ -301,6 +311,8 @@ const en: Dict = {
     labels: { company: "Company name", vat: "Company / VAT number", seat: "Registered office", manager: "Manager", email: "Email", phone: "Phone" },
   },
   privacy: {
+    authority: "Belgian Data Protection Authority",
+    extra: [{"title": "Legal basis and recipients", "desc": "Quote requests are processed to prepare a contract (GDPR Article 6.1.b). Your consent authorises the selected transfer to WhatsApp/Meta or your email provider. This form does not store your data on this site. These providers may process data outside the EEA under their own safeguards and policies."}, {"title": "Requests and response times", "desc": "Email us to request access, correction, deletion, restriction, objection or withdrawal of consent. We normally respond within one month. Contract-related information remains subject to statutory retention requirements."}],
     title: "Privacy policy",
     sections: [
       { title: "Data controller", desc: "AMJ+ Srl is the controller of your personal data in accordance with the GDPR (EU Regulation 2016/679)." },
@@ -318,6 +330,7 @@ const ar: Dict = {
   nav: { home: "الرئيسية", business: "مركز الأعمال", cleaning: "التنظيف", renovation: "الترميم", contact: "اتصل بنا", cta: "عرض سعر مجاني" },
   slogan: "شريكك في نجاح مشاريعك — خدمة متكاملة لنشاطك في بلجيكا",
   common: {
+    close: "إغلاق", illustration: "صور توضيحية للتحولات الممكنة وليست صور مشاريع منفذة.",
     discover: "اكتشف خدماتنا", whatsapp: "واتساب مباشر", request: "اطلب هذه الخدمة", learnMore: "اعرف المزيد",
     quote: "اطلب عرض سعر مجاني", before: "قبل", after: "بعد", compliant: "مطابق 100% للقوانين البلجيكية", vatLabel: "رقم الشركة",
     getStarted: "لنتحدث عن مشروعك", getStartedSub: "رد سريع وعرض سعر مجاني دون أي التزام.",
@@ -372,10 +385,11 @@ const ar: Dict = {
       { title: "تجديد المطابخ والحمامات", desc: "مساحات عصرية وعملية وأنيقة مصممة حسب رغبتك." },
       { title: "العزل، الكهرباء، والسباكة وفق المعايير البلجيكية", desc: "أعمال تقنية منفذة وفق المعايير البلجيكية المعمول بها." },
     ],
-    galleryTitle: "إنجازاتنا", baTitle: "قبل / بعد",
+    galleryTitle: "أفكار للترميم", baTitle: "قبل / بعد",
     gallery: ["صالون عصري", "مطبخ حسب الطلب", "حمام", "واجهة مرممة", "دهان وتشطيبات", "ورشة قيد الإنجاز"],
   },
   contact: {
+    mapLoad: "تحميل خرائط Google", mapNote: "خرائط Google خدمة خارجية. يؤدي تحميلها إلى مشاركة عنوان IP الخاص بك مع Google.",
     eyebrow: "اتصل بنا وعرض السعر", title: "لنتحدث عن مشروعك",
     sub: "تواصل معنا مباشرة أو املأ الاستمارة وسنرد عليك بسرعة.",
     manager: "الإدارة", phone: "الهاتف", whatsapp: "واتساب", email: "البريد الإلكتروني", address: "العنوان",
@@ -388,7 +402,7 @@ const ar: Dict = {
     msgIntro: "مرحباً AMJ+ Srl، أرغب في الحصول على عرض سعر.",
   },
   cookie: {
-    text: "نستخدم ملفات تعريف الارتباط لتحسين تجربتك. يمكنك القبول أو الرفض أو تخصيص اختياراتك.",
+    text: "يحفظ الموقع تفضيلات اللغة والموافقة فقط. لا توجد أدوات تحليل أو إعلان فعالة. تُحمّل خرائط Google عند طلبك فقط.",
     accept: "قبول الكل", refuse: "رفض", customize: "تخصيص", save: "حفظ",
     necessary: "ملفات ضرورية (مفعلة دائماً)", analytics: "ملفات تحليلية", marketing: "ملفات تسويقية", policy: "سياسة الخصوصية",
   },
@@ -397,7 +411,7 @@ const ar: Dict = {
     title: "الإشعارات القانونية",
     sections: [
       { title: "ناشر الموقع", desc: "يتم نشر هذا الموقع من قبل شركة AMJ+ Srl، شركة ذات مسؤولية محدودة خاضعة للقانون البلجيكي." },
-      { title: "الاستضافة", desc: "الموقع مستضاف لدى مزود محترف يضمن توفره وأمانه." },
+      { title: "الاستضافة", desc: "الموقع مصمم للنشر على GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, الولايات المتحدة). يعتمد مزود الاستضافة الفعلي على مكان النشر." },
       { title: "الملكية الفكرية", desc: "جميع المحتويات (النصوص، الشعار، الصور) محمية. يُمنع أي نسخ دون إذن كتابي." },
       { title: "المسؤولية", desc: "تسعى AMJ+ Srl لتقديم معلومات دقيقة ولا تتحمل المسؤولية عن أي أخطاء أو سهو." },
       { title: "القانون المطبق", desc: "يخضع هذا الموقع للقانون البلجيكي، وتختص محاكم بروكسل بأي نزاع." },
@@ -405,6 +419,8 @@ const ar: Dict = {
     labels: { company: "اسم الشركة", vat: "رقم الشركة / الضريبة", seat: "المقر الاجتماعي", manager: "المسؤول", email: "البريد الإلكتروني", phone: "الهاتف" },
   },
   privacy: {
+    authority: "سلطة حماية البيانات البلجيكية",
+    extra: [{"title": "الأساس القانوني والجهات المستلمة", "desc": "تعالج طلبات عرض السعر لإعداد عقد وفق المادة 6.1.b من اللائحة العامة لحماية البيانات. تسمح موافقتك بالمشاركة المختارة مع WhatsApp/Meta أو مزود البريد الإلكتروني. لا يحفظ هذا النموذج بياناتك على الموقع. قد تعالج هذه الجهات البيانات خارج المنطقة الاقتصادية الأوروبية وفق ضماناتها وسياساتها."}, {"title": "الطلبات ومواعيد الرد", "desc": "راسلنا لطلب الوصول أو التصحيح أو الحذف أو تقييد المعالجة أو الاعتراض أو سحب الموافقة. نرد عادة خلال شهر. تخضع بيانات العقود لالتزامات الاحتفاظ القانونية."}],
     title: "سياسة الخصوصية",
     sections: [
       { title: "المسؤول عن المعالجة", desc: "شركة AMJ+ Srl مسؤولة عن معالجة بياناتك الشخصية وفقاً للائحة العامة لحماية البيانات (GDPR)." },

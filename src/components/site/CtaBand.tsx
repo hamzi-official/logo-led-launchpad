@@ -7,10 +7,8 @@ import { Reveal } from "./Motion";
 export function CtaBand() {
   const { t } = useI18n();
   return (
-    <section className="px-6 py-24">
-      <Reveal className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-gradient-navy px-8 py-16 text-center shadow-luxe md:px-16">
-        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
-        <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-royal/50 blur-3xl" />
+    <section className="bg-gradient-navy px-6 py-20">
+      <Reveal className="relative mx-auto max-w-6xl text-center">
         <h2 className="relative font-display text-3xl font-bold text-primary-foreground md:text-5xl">{t.common.getStarted}</h2>
         <p className="relative mt-4 text-lg text-primary-foreground/75">{t.common.getStartedSub}</p>
         <div className="relative mt-8 flex flex-wrap justify-center gap-4">

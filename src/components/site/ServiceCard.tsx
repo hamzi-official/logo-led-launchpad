@@ -12,7 +12,7 @@ export function ServiceCard({ icon: Icon, title, desc, index, image }: { icon: L
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.6, delay: (index % 4) * 0.08 }}
       whileHover={{ y: -10 }}
-      className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow hover:shadow-luxe"
+      className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow hover:shadow-luxe"
     >
       {image && (
         <div className="h-52 overflow-hidden">
@@ -20,7 +20,7 @@ export function ServiceCard({ icon: Icon, title, desc, index, image }: { icon: L
         </div>
       )}
       <div className="flex flex-1 flex-col p-7">
-        <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-navy text-gold transition group-hover:bg-gradient-gold group-hover:text-navy">
+        <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-navy text-gold transition group-hover:bg-gradient-gold group-hover:text-navy">
           <Icon className="h-6 w-6" />
         </div>
         <h3 className="font-display text-lg font-bold text-navy">{title}</h3>

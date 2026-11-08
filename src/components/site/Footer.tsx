@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import logo from "@/assets/amj-logo.png.asset.json";
 import { useI18n } from "@/lib/i18n";
-import { COMPANY } from "@/lib/company";
+import { COMPANY, assetUrl } from "@/lib/company";
 
 export function Footer() {
   const { t, lang } = useI18n();
@@ -11,7 +11,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3">
         <div>
           <div className="inline-block rounded-2xl bg-background p-3">
-            <img src={logo.url} alt="AMJ+ Srl" className="h-16 w-auto" />
+            <img src={assetUrl(logo.url)} alt="AMJ+ Srl" className="h-16 w-auto" />
           </div>
           <p className="mt-5 text-sm leading-relaxed text-primary-foreground/70">{t.slogan}</p>
           <p className="mt-4 text-xs font-semibold text-gold">BCE / KBO / TVA: {COMPANY.vat}</p>

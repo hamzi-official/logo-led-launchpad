@@ -1,3 +1,15 @@
+import heroAsset from "@/assets/hero.jpg.asset.json";
+import officeAsset from "@/assets/office.jpg.asset.json";
+import office2Asset from "@/assets/office2.jpg.asset.json";
+import cleaningAsset from "@/assets/cleaning.jpg.asset.json";
+import cleaning2Asset from "@/assets/cleaning2.jpg.asset.json";
+import constructionAsset from "@/assets/construction.jpg.asset.json";
+import houseAsset from "@/assets/house.jpg.asset.json";
+import kitchenAsset from "@/assets/kitchen.jpg.asset.json";
+import bathroomAsset from "@/assets/bathroom.jpg.asset.json";
+import livingAsset from "@/assets/living.jpg.asset.json";
+import paintingAsset from "@/assets/painting.jpg.asset.json";
+import meetingAsset from "@/assets/meeting.jpg.asset.json";
 export const COMPANY = {
   name: "AMJ+ Srl",
   vat: "BE 1027.549.902",
@@ -15,20 +27,20 @@ export const COMPANY = {
     "https://www.google.com/maps?q=Bergensesteenweg+423A,+1600+Sint-Pieters-Leeuw,+Belgium&output=embed",
 };
 
-const u = (id: string, w = 1600) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+export const assetUrl = (url: string) => import.meta.env.VITE_STATIC_PAGES === "true" && url.startsWith("/") ? `.${url}` : url;
 
 export const IMG = {
-  hero: u("photo-1486406146926-c627a92ad1ab", 2000),
-  office: u("photo-1497366216548-37526070297c"),
-  office2: u("photo-1497366811353-6870744d04b2"),
-  cleaning: u("photo-1581578731548-c64695cc6952"),
-  cleaning2: u("photo-1527515637462-cff94eecc1ac"),
-  construction: u("photo-1503387762-592deb58ef4e"),
-  house: u("photo-1600585154340-be6161a56a0c"),
-  kitchen: u("photo-1556909114-f6e7ad7d3136"),
-  bathroom: u("photo-1552321554-5fefe8c9ef14"),
-  living: u("photo-1600210492486-724fe5c67fb0"),
-  painting: u("photo-1589939705384-5185137a7f0f"),
-  meeting: u("photo-1556761175-5973dc0f32e7"),
+  hero: assetUrl(heroAsset.url),
+  office: assetUrl(officeAsset.url),
+  office2: assetUrl(office2Asset.url),
+  cleaning: assetUrl(cleaningAsset.url),
+  cleaning2: assetUrl(cleaning2Asset.url),
+  construction: assetUrl(constructionAsset.url),
+  house: assetUrl(houseAsset.url),
+  kitchen: assetUrl(kitchenAsset.url),
+  bathroom: assetUrl(bathroomAsset.url),
+  living: assetUrl(livingAsset.url),
+  painting: assetUrl(paintingAsset.url),
+  meeting: assetUrl(meetingAsset.url),
 };

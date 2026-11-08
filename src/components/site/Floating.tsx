@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { COMPANY } from "@/lib/company";
+import { Button } from "@/components/ui/button";
 
 export function WhatsAppFloat() {
   return (
@@ -31,10 +32,21 @@ export function CookieBanner() {
 
   useEffect(() => {
     if (!localStorage.getItem("amj-cookie-consent")) setShow(true);
+    const openSettings = () => {
+      try {
+        const saved = JSON.parse(localStorage.getItem("amj-cookie-consent") ?? "null") as Consent | null;
+        setAnalytics(saved?.analytics === true);
+        setMarketing(saved?.marketing === true);
+      } catch { setAnalytics(false); setMarketing(false); }
+      setCustom(true); setShow(true);
+    };
+    window.addEventListener("amj-consent-settings", openSettings);
+    return () => window.removeEventListener("amj-consent-settings", openSettings);
   }, []);
 
   const save = (c: Consent) => {
     localStorage.setItem("amj-cookie-consent", JSON.stringify({ ...c, date: new Date().toISOString() }));
+    window.dispatchEvent(new Event("amj-consent-change"));
     setShow(false);
   };
 
@@ -43,7 +55,7 @@ export function CookieBanner() {
       {show && (
         <motion.div
           initial={{ y: 120, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 120, opacity: 0 }}
-          className="fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-4xl rounded-2xl border border-gold/30 bg-navy p-6 text-primary-foreground shadow-luxe md:right-28"
+          role="dialog" aria-label={t.cookie.policy} className="fixed inset-x-4 bottom-4 z-[60] mx-auto max-h-[75svh] max-w-4xl overflow-y-auto rounded-lg border border-gold/30 bg-navy p-6 text-primary-foreground shadow-luxe md:right-28"
         >
           <p className="text-sm leading-relaxed text-primary-foreground/85">
             {t.cookie.text}{" "}
@@ -57,12 +69,12 @@ export function CookieBanner() {
             </div>
           )}
           <div className="mt-5 flex flex-wrap gap-3">
-            <button onClick={() => save({ necessary: true, analytics: true, marketing: true })} className="rounded-full bg-gradient-gold px-5 py-2 text-sm font-bold text-navy">{t.cookie.accept}</button>
-            <button onClick={() => save({ necessary: true, analytics: false, marketing: false })} className="rounded-full border border-primary-foreground/30 px-5 py-2 text-sm font-semibold">{t.cookie.refuse}</button>
+            <Button onClick={() => save({ necessary: true, analytics: true, marketing: true })} className="bg-gradient-gold text-navy">{t.cookie.accept}</Button>
+            <Button variant="outline" onClick={() => save({ necessary: true, analytics: false, marketing: false })} className="border-primary-foreground/30 bg-transparent text-primary-foreground">{t.cookie.refuse}</Button>
             {custom ? (
-              <button onClick={() => save({ necessary: true, analytics, marketing })} className="rounded-full border border-gold px-5 py-2 text-sm font-semibold text-gold">{t.cookie.save}</button>
+              <Button variant="outline" onClick={() => save({ necessary: true, analytics, marketing })} className="border-gold bg-transparent text-gold">{t.cookie.save}</Button>
             ) : (
-              <button onClick={() => setCustom(true)} className="rounded-full px-5 py-2 text-sm font-semibold text-gold underline">{t.cookie.customize}</button>
+              <Button variant="link" onClick={() => setCustom(true)} className="text-gold">{t.cookie.customize}</Button>
             )}
           </div>
         </motion.div>
