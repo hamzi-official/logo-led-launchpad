@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { MoveHorizontal } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
-export function BeforeAfter({ image, beforeImage, diptych = false }: { image: string; beforeImage?: string; diptych?: boolean }) {
+export function BeforeAfter({ image, beforeImage, diptych = false }: { image: string; beforeImage: string; diptych?: boolean }) {
   const { t } = useI18n();
   const [pos, setPos] = useState(50);
   const ref = useRef<HTMLDivElement>(null);
@@ -27,11 +27,10 @@ export function BeforeAfter({ image, beforeImage, diptych = false }: { image: st
       <img src={image} alt={t.common.after} loading="lazy" className={`absolute inset-y-0 h-full max-w-none object-cover ${diptych ? "right-0 w-[200%]" : "inset-x-0 w-full"}`} draggable={false} />
       <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
         <img
-          src={beforeImage ?? image}
+          src={beforeImage}
           alt={t.common.before}
           className={`absolute inset-y-0 h-full max-w-none object-cover ${diptych ? "left-0 w-[200%]" : "inset-x-0 w-full"}`}
           loading="lazy"
-          style={beforeImage ? undefined : { filter: "grayscale(0.85) sepia(0.45) brightness(0.62) contrast(0.85) blur(1px)" }}
           draggable={false}
         />
       </div>

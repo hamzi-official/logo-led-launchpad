@@ -86,6 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "referrer", content: "strict-origin-when-cross-origin" },
       { property: "og:site_name", content: "AMJ+ Srl" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -101,7 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" },
     ],
   }),
-  shellComponent: RootShell,
+  ...(import.meta.env["VITE_STATIC_PAGES"] === "true" ? {} : { shellComponent: RootShell }),
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
@@ -126,6 +127,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      {import.meta.env["VITE_STATIC_PAGES"] === "true" && <HeadContent />}
       <MotionConfig reducedMotion="user"><I18nProvider>
         <Navbar /><main><Outlet /></main><Footer /><WhatsAppFloat /><CookieBanner />
       </I18nProvider></MotionConfig>

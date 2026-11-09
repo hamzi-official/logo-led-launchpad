@@ -11,7 +11,7 @@ export function WhatsAppFloat() {
     <a
       href={COMPANY.whatsappHref}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       aria-label="WhatsApp"
       className="fixed right-6 bottom-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-gold text-navy shadow-gold transition hover:scale-110"
     >

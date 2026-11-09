@@ -4,6 +4,7 @@ const fr = {
   nav: { home: "Accueil", business: "Centre d'Affaires", cleaning: "Nettoyage", renovation: "Rénovation", contact: "Contact", cta: "Devis Gratuit" },
   slogan: "Votre partenaire pour la réussite de vos projets — Un service complet pour votre activité en Belgique",
   common: {
+    menu: "Menu",
     close: "Fermer", illustration: "Illustrations de transformations possibles — photos non contractuelles.",
     discover: "Découvrir nos services", whatsapp: "WhatsApp direct", request: "Demander ce service", learnMore: "En savoir plus",
     quote: "Demander un devis gratuit", before: "Avant", after: "Après", compliant: "100% Conforme en Belgique", vatLabel: "BCE",
@@ -63,6 +64,7 @@ const fr = {
     gallery: ["Salon contemporain", "Cuisine sur mesure", "Salle de bain", "Façade rénovée", "Peinture & finitions", "Chantier en cours"],
   },
   contact: {
+    locationTitle: "Notre adresse & votre itinéraire", distance: "Proche de Bruxelles / Ring R0 — Accès facile", directions: "Itinéraire & route en direct", openMap: "Ouvrir sur Google Maps", cooldown: "Veuillez patienter 30 secondes avant de réessayer.",
     mapLoad: "Charger Google Maps", mapNote: "Google Maps est un service externe. Son chargement transmet votre adresse IP à Google.",
     eyebrow: "Contact & Devis", title: "Parlons de votre projet",
     sub: "Contactez-nous directement ou remplissez le formulaire : nous vous répondons rapidement.",
@@ -72,7 +74,7 @@ const fr = {
     choose: "Choisissez un service",
     gdpr: "J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la politique de confidentialité.",
     sendWa: "Envoyer via WhatsApp", sendMail: "Envoyer par e-mail",
-    required: "Veuillez remplir le nom, le téléphone et accepter la politique de confidentialité.",
+    required: "Veuillez vérifier vos coordonnées et accepter la politique de confidentialité.",
     msgIntro: "Bonjour AMJ+ Srl, je souhaite un devis.",
   },
   cookie: {
@@ -114,6 +116,7 @@ const nl: Dict = {
   nav: { home: "Home", business: "Bedrijvencentrum", cleaning: "Schoonmaak", renovation: "Renovatie", contact: "Contact", cta: "Gratis Offerte" },
   slogan: "Uw partner voor het succes van uw projecten — Een complete service voor uw activiteit in België",
   common: {
+    menu: "Menu",
     close: "Sluiten", illustration: "Illustraties van mogelijke transformaties — niet-contractuele foto’s.",
     discover: "Ontdek onze diensten", whatsapp: "Direct WhatsApp", request: "Deze dienst aanvragen", learnMore: "Meer info",
     quote: "Gratis offerte aanvragen", before: "Voor", after: "Na", compliant: "100% Conform in België", vatLabel: "KBO",
@@ -173,6 +176,7 @@ const nl: Dict = {
     gallery: ["Hedendaagse woonkamer", "Keuken op maat", "Badkamer", "Gerenoveerde gevel", "Schilderwerk & afwerking", "Lopende werf"],
   },
   contact: {
+    locationTitle: "Onze locatie & uw route", distance: "Dicht bij Brussel / Ring R0 — Gemakkelijk bereikbaar", directions: "Routebeschrijving & live route", openMap: "Openen in Google Maps", cooldown: "Wacht 30 seconden voordat u het opnieuw probeert.",
     mapLoad: "Google Maps laden", mapNote: "Google Maps is een externe dienst. Bij het laden wordt uw IP-adres met Google gedeeld.",
     eyebrow: "Contact & Offerte", title: "Laten we over uw project praten",
     sub: "Neem rechtstreeks contact op of vul het formulier in: wij antwoorden snel.",
@@ -182,7 +186,7 @@ const nl: Dict = {
     choose: "Kies een dienst",
     gdpr: "Ik ga akkoord dat mijn gegevens worden gebruikt om mijn aanvraag te behandelen, conform het privacybeleid.",
     sendWa: "Verzenden via WhatsApp", sendMail: "Verzenden per e-mail",
-    required: "Vul uw naam en telefoon in en aanvaard het privacybeleid.",
+    required: "Controleer uw contactgegevens en aanvaard het privacybeleid.",
     msgIntro: "Hallo AMJ+ Srl, ik wens een offerte.",
   },
   cookie: {
@@ -222,6 +226,7 @@ const en: Dict = {
   nav: { home: "Home", business: "Business Center", cleaning: "Cleaning", renovation: "Renovation", contact: "Contact", cta: "Free Quote" },
   slogan: "Your partner for the success of your projects — A complete service for your business in Belgium",
   common: {
+    menu: "Menu",
     close: "Close", illustration: "Illustrations of possible transformations — illustrative photography.",
     discover: "Discover our services", whatsapp: "WhatsApp us", request: "Request this service", learnMore: "Learn more",
     quote: "Request a free quote", before: "Before", after: "After", compliant: "100% Compliant in Belgium", vatLabel: "CBE",
@@ -281,6 +286,7 @@ const en: Dict = {
     gallery: ["Contemporary living room", "Custom kitchen", "Bathroom", "Renovated façade", "Painting & finishes", "Work in progress"],
   },
   contact: {
+    locationTitle: "Our location & your route", distance: "Near Brussels / Ring R0 — Easy access", directions: "Get directions & live route", openMap: "Open in Google Maps", cooldown: "Please wait 30 seconds before trying again.",
     mapLoad: "Load Google Maps", mapNote: "Google Maps is an external service. Loading it shares your IP address with Google.",
     eyebrow: "Contact & Quote", title: "Let's talk about your project",
     sub: "Contact us directly or fill in the form: we reply quickly.",
@@ -290,7 +296,7 @@ const en: Dict = {
     choose: "Choose a service",
     gdpr: "I agree that my data may be used to process my request, in accordance with the privacy policy.",
     sendWa: "Send via WhatsApp", sendMail: "Send by email",
-    required: "Please enter your name and phone and accept the privacy policy.",
+    required: "Please check your contact details and accept the privacy policy.",
     msgIntro: "Hello AMJ+ Srl, I would like a quote.",
   },
   cookie: {
@@ -330,6 +336,7 @@ const ar: Dict = {
   nav: { home: "الرئيسية", business: "مركز الأعمال", cleaning: "التنظيف", renovation: "الترميم", contact: "اتصل بنا", cta: "عرض سعر مجاني" },
   slogan: "شريكك في نجاح مشاريعك — خدمة متكاملة لنشاطك في بلجيكا",
   common: {
+    menu: "القائمة",
     close: "إغلاق", illustration: "صور توضيحية للتحولات الممكنة وليست صور مشاريع منفذة.",
     discover: "اكتشف خدماتنا", whatsapp: "واتساب مباشر", request: "اطلب هذه الخدمة", learnMore: "اعرف المزيد",
     quote: "اطلب عرض سعر مجاني", before: "قبل", after: "بعد", compliant: "مطابق 100% للقوانين البلجيكية", vatLabel: "رقم الشركة",
@@ -389,6 +396,7 @@ const ar: Dict = {
     gallery: ["صالون عصري", "مطبخ حسب الطلب", "حمام", "واجهة مرممة", "دهان وتشطيبات", "ورشة قيد الإنجاز"],
   },
   contact: {
+    locationTitle: "موقعنا وطريق الوصول", distance: "قريب من بروكسل / Ring R0 — وصول سهل", directions: "الاتجاهات والمسار المباشر", openMap: "فتح في خرائط Google", cooldown: "يرجى الانتظار 30 ثانية قبل المحاولة مجدداً.",
     mapLoad: "تحميل خرائط Google", mapNote: "خرائط Google خدمة خارجية. يؤدي تحميلها إلى مشاركة عنوان IP الخاص بك مع Google.",
     eyebrow: "اتصل بنا وعرض السعر", title: "لنتحدث عن مشروعك",
     sub: "تواصل معنا مباشرة أو املأ الاستمارة وسنرد عليك بسرعة.",
@@ -398,7 +406,7 @@ const ar: Dict = {
     choose: "اختر خدمة",
     gdpr: "أوافق على استخدام بياناتي لمعالجة طلبي وفقاً لسياسة الخصوصية.",
     sendWa: "إرسال عبر واتساب", sendMail: "إرسال بالبريد الإلكتروني",
-    required: "يرجى إدخال الاسم والهاتف والموافقة على سياسة الخصوصية.",
+    required: "يرجى التحقق من بيانات الاتصال والموافقة على سياسة الخصوصية.",
     msgIntro: "مرحباً AMJ+ Srl، أرغب في الحصول على عرض سعر.",
   },
   cookie: {

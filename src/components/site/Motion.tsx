@@ -30,7 +30,7 @@ export function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 export function SectionTitle({ eyebrow, title, sub, light }: { eyebrow?: string; title: string; sub?: string; light?: boolean }) {
   return (
     <Reveal className="mx-auto mb-14 max-w-3xl text-center">
-      {eyebrow && <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-gold">{eyebrow}</p>}
+      {eyebrow && <p className="mb-3 text-xs font-bold uppercase text-gold">{eyebrow}</p>}
       <h2 className={`font-display text-3xl font-bold md:text-5xl ${light ? "text-primary-foreground" : "text-navy"}`}>{title}</h2>
       <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-gradient-gold" />
       {sub && <p className={`mt-5 text-lg ${light ? "text-primary-foreground/75" : "text-muted-foreground"}`}>{sub}</p>}

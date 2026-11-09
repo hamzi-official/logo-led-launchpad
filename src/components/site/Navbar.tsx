@@ -2,8 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import logo from "@/assets/amj-logo.png.asset.json";
-import { assetUrl } from "@/lib/company";
+import { BrandLogo } from "./BrandLogo";
+import { Button } from "@/components/ui/button";
 import { useI18n, LANGS } from "@/lib/i18n";
 
 export function Navbar() {
@@ -29,13 +29,14 @@ export function Navbar() {
   const LangSwitch = () => (
     <div className="flex items-center rounded-full border border-border bg-background p-1">
       {LANGS.map((l) => (
-        <button
+        <Button
+          variant="ghost" size="sm" aria-pressed={lang === l}
           key={l}
           onClick={() => setLang(l)}
           className={`rounded-full px-2.5 py-1 text-xs font-bold uppercase transition ${lang === l ? "bg-navy text-primary-foreground" : "text-muted-foreground hover:text-navy"}`}
         >
           {l}
-        </button>
+        </Button>
       ))}
     </div>
   );
@@ -44,7 +45,7 @@ export function Navbar() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "glass-light py-2 shadow-luxe" : "bg-background/95 py-3"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6">
         <Link to="/" className="shrink-0">
-          <img src={assetUrl(logo.url)} alt="AMJ+ Srl" className="h-12 w-auto md:h-14" />
+          <BrandLogo />
         </Link>
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map((l) => (
@@ -64,9 +65,9 @@ export function Navbar() {
             {t.nav.cta}
           </Link>
         </div>
-        <button className="text-navy lg:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
+        <Button className="text-navy lg:hidden" onClick={() => setOpen(!open)} aria-expanded={open} aria-label={t.common.menu} variant="ghost" size="icon">
           {open ? <X /> : <Menu />}
-        </button>
+        </Button>
       </div>
       <AnimatePresence>
         {open && (

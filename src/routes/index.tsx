@@ -3,6 +3,7 @@ import { ArrowRight, Building2, Sparkles, Hammer, MapPin, Languages, ShieldCheck
 import { useI18n } from "@/lib/i18n";
 import { COMPANY, IMG } from "@/lib/company";
 import { Reveal, SectionTitle, Counter } from "@/components/site/Motion";
+import { ContactMap } from "@/components/site/ContactMap";
 import { CtaBand } from "@/components/site/CtaBand";
 import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
@@ -31,7 +32,7 @@ function Index() {
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/80">{t.slogan}</p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg" className="h-auto whitespace-normal bg-gradient-gold py-4 text-navy"><a href="#divisions">{t.common.discover}<ArrowRight /></a></Button>
-          <Button asChild variant="outline" size="lg" className="h-auto border-primary-foreground/40 bg-transparent py-4 text-primary-foreground"><a href={COMPANY.whatsappHref} target="_blank" rel="noreferrer"><MessageCircle />{t.common.whatsapp}</a></Button>
+          <Button asChild variant="outline" size="lg" className="h-auto border-primary-foreground/40 bg-transparent py-4 text-primary-foreground"><a href={COMPANY.whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle />{t.common.whatsapp}</a></Button>
         </div>
         <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-xs text-primary-foreground/80"><span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" />{t.common.compliant}</span><span>{t.common.vatLabel}: {COMPANY.vat}</span></div>
         </Reveal>
@@ -47,6 +48,6 @@ function Index() {
     <section className="bg-slate-soft px-6 py-20"><div className="mx-auto max-w-7xl"><SectionTitle title={t.home.whyTitle} />
       <div className="mb-14 grid grid-cols-2 gap-8 border-b border-border pb-10 text-center"><div><p className="font-display text-5xl font-bold text-royal"><Counter to={3} /></p><p className="mt-3 text-sm">{t.home.stats[0]}</p></div><div><p className="font-display text-5xl font-bold text-gold"><Counter to={4} /></p><p className="mt-3 text-sm">{t.home.stats[1]}</p></div></div>
       <div className="grid gap-10 md:grid-cols-3">{t.home.why.map((item, i) => { const Icon = [MapPin, Languages, ShieldCheck][i] ?? ShieldCheck; return <Reveal key={item.title}><Icon className="mb-5 h-8 w-8 text-gold" /><h3 className="text-xl font-bold">{item.title}</h3><p className="mt-4 leading-relaxed text-muted-foreground">{item.desc}</p></Reveal>; })}</div>
-    </div></section><CtaBand />
+    </div></section><CtaBand /><ContactMap />
   </>;
 }

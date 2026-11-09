@@ -1,3 +1,5 @@
+import cleaningBeforeAsset from "@/assets/cleaning-before.jpg.asset.json";
+import renovationBeforeAsset from "@/assets/renovation-before.jpg.asset.json";
 import heroAsset from "@/assets/hero.jpg.asset.json";
 import officeAsset from "@/assets/office.jpg.asset.json";
 import office2Asset from "@/assets/office2.jpg.asset.json";
@@ -24,13 +26,15 @@ export const COMPANY = {
   email: "Amjplus2025@gmail.com",
   emailHref: "mailto:Amjplus2025@gmail.com",
   mapEmbed:
-    "https://www.google.com/maps?q=Bergensesteenweg+423A,+1600+Sint-Pieters-Leeuw,+Belgium&output=embed",
+    "https://www.google.com/maps?q=Bergensesteenweg+423+A,+1600+Sint-Pieters-Leeuw,+Belgium&output=embed",
 };
 
 
-export const assetUrl = (url: string) => import.meta.env.VITE_STATIC_PAGES === "true" && url.startsWith("/") ? `.${url}` : url;
+export const assetUrl = (url: string) => import.meta.env["VITE_STATIC_PAGES"] === "true" && url.startsWith("/") ? `.${url}` : url;
 
 export const IMG = {
+  cleaningBefore: assetUrl(cleaningBeforeAsset.url),
+  renovationBefore: assetUrl(renovationBeforeAsset.url),
   hero: assetUrl(heroAsset.url),
   office: assetUrl(officeAsset.url),
   office2: assetUrl(office2Asset.url),

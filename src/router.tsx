@@ -1,5 +1,5 @@
 import { QueryClient } from "@tanstack/react-query";
-import { createRouter } from "@tanstack/react-router";
+import { createRouter, createHashHistory } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
 export const getRouter = () => {
@@ -7,6 +7,7 @@ export const getRouter = () => {
   const queryClient = new QueryClient();
 
   const router = createRouter({
+    ...(import.meta.env["VITE_STATIC_PAGES"] === "true" ? { history: createHashHistory() } : {}),
     routeTree,
     context: { queryClient },
     scrollRestoration: true,

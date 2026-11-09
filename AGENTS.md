@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+- Keep TanStack Start file routes and the shared root shell for Lovable; the separate static Vite entry reuses those routes with TanStack hash history so GitHub Pages needs no server runtime.
+- Keep shared quote validation and payload construction in pure utilities with tests; outbound requests open WhatsApp or email and store no form data.
+- Keep external Maps loading behind explicit consent; directions links work independently of embedding.
+- Materialize asset pointers into the static deployment artifact so GitHub Pages does not rely on Lovable's asset-serving paths.
