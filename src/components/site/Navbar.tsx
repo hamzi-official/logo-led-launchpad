@@ -72,7 +72,7 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden bg-background lg:hidden">
-            <div className="flex flex-col gap-4 px-6 py-6">
+            <div className="flex max-h-[calc(100svh-80px)] flex-col gap-4 overflow-y-auto px-6 py-6">
               {links.map((l) => (
                 <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="text-lg font-semibold text-navy">{l.label}</Link>
               ))}
