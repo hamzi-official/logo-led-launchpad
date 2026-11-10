@@ -1,5 +1,5 @@
-import cleaningBeforeAsset from "@/assets/cleaning-before.jpg.asset.json";
-import renovationBeforeAsset from "@/assets/renovation-before.jpg.asset.json";
+import cleaningComparisonAsset from "@/assets/cleaning-comparison.jpg.asset.json";
+import renovationComparisonAsset from "@/assets/renovation-comparison.jpg.asset.json";
 import heroAsset from "@/assets/hero.jpg.asset.json";
 import officeAsset from "@/assets/office.jpg.asset.json";
 import office2Asset from "@/assets/office2.jpg.asset.json";
@@ -33,8 +33,8 @@ export const COMPANY = {
 export const assetUrl = (url: string) => import.meta.env["VITE_STATIC_PAGES"] === "true" && url.startsWith("/") ? `.${url}` : url;
 
 export const IMG = {
-  cleaningBefore: assetUrl(cleaningBeforeAsset.url),
-  renovationBefore: assetUrl(renovationBeforeAsset.url),
+  cleaningComparison: assetUrl(cleaningComparisonAsset.url),
+  renovationComparison: assetUrl(renovationComparisonAsset.url),
   hero: assetUrl(heroAsset.url),
   office: assetUrl(officeAsset.url),
   office2: assetUrl(office2Asset.url),

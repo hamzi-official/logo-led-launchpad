@@ -197,6 +197,22 @@ body { font-family: var(--font-sans); }
 }
 @keyframes pulse-ring { 0% { transform: scale(1); opacity: .6 } 100% { transform: scale(1.8); opacity: 0 } }
 @utility animate-pulse-ring { animation: pulse-ring 1.8s ease-out infinite; }
+@utility before-dust {
+  background-image:
+    radial-gradient(circle at 18% 26%, var(--gold-light) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 64%, var(--primary-foreground) 0 1px, transparent 2px),
+    repeating-linear-gradient(17deg, transparent 0 13px, color-mix(in oklab, var(--primary-foreground) 9%, transparent) 14px, transparent 15px 29px);
+  background-size: 37px 41px, 53px 47px, auto;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+@utility before-grid {
+  background-image:
+    repeating-linear-gradient(90deg, color-mix(in oklab, var(--gold) 24%, transparent) 0 1px, transparent 1px 84px),
+    repeating-linear-gradient(0deg, color-mix(in oklab, var(--gold) 18%, transparent) 0 1px, transparent 1px 84px),
+    repeating-linear-gradient(126deg, transparent 0 71px, color-mix(in oklab, var(--primary-foreground) 20%, transparent) 72px, transparent 73px 149px);
+  opacity: 0.48;
+}
 
 .home-cover { min-height: min(780px, 84svh); margin-top: 80px; }
 main { min-height: 50vh; }

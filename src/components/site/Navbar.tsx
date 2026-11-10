@@ -42,7 +42,7 @@ export function Navbar() {
   );
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "glass-light py-2 shadow-luxe" : "bg-background/95 py-3"}`}>
+    <header className={`fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-500 ${scrolled ? "py-2 shadow-luxe" : "py-3"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6">
         <Link to="/" className="shrink-0">
           <BrandLogo />

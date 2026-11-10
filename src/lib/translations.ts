@@ -9,6 +9,7 @@ const fr = {
     discover: "Découvrir nos services", whatsapp: "WhatsApp direct", request: "Demander ce service", learnMore: "En savoir plus",
     quote: "Demander un devis gratuit", before: "Avant", after: "Après", compliant: "100% Conforme en Belgique", vatLabel: "BCE",
     getStarted: "Parlons de votre projet", getStartedSub: "Réponse rapide, devis gratuit et sans engagement.",
+    galleryTitle: "Galerie de projets",
   },
   home: {
     eyebrow: "Services aux entreprises · Nettoyage · Rénovation",
@@ -121,6 +122,7 @@ const nl: Dict = {
     discover: "Ontdek onze diensten", whatsapp: "Direct WhatsApp", request: "Deze dienst aanvragen", learnMore: "Meer info",
     quote: "Gratis offerte aanvragen", before: "Voor", after: "Na", compliant: "100% Conform in België", vatLabel: "KBO",
     getStarted: "Laten we over uw project praten", getStartedSub: "Snel antwoord, gratis en vrijblijvende offerte.",
+    galleryTitle: "Projectgalerij",
   },
   home: {
     eyebrow: "Zakelijke diensten · Schoonmaak · Renovatie",
@@ -231,6 +233,7 @@ const en: Dict = {
     discover: "Discover our services", whatsapp: "WhatsApp us", request: "Request this service", learnMore: "Learn more",
     quote: "Request a free quote", before: "Before", after: "After", compliant: "100% Compliant in Belgium", vatLabel: "CBE",
     getStarted: "Let's talk about your project", getStartedSub: "Fast reply, free and no-obligation quote.",
+    galleryTitle: "Project Gallery",
   },
   home: {
     eyebrow: "Business services · Cleaning · Renovation",
@@ -341,6 +344,7 @@ const ar: Dict = {
     discover: "اكتشف خدماتنا", whatsapp: "واتساب مباشر", request: "اطلب هذه الخدمة", learnMore: "اعرف المزيد",
     quote: "اطلب عرض سعر مجاني", before: "قبل", after: "بعد", compliant: "مطابق 100% للقوانين البلجيكية", vatLabel: "رقم الشركة",
     getStarted: "لنتحدث عن مشروعك", getStartedSub: "رد سريع وعرض سعر مجاني دون أي التزام.",
+    galleryTitle: "معرض المشاريع",
   },
   home: {
     eyebrow: "خدمات الشركات · التنظيف · الترميم",
