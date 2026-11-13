@@ -29,26 +29,24 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies and build static pages
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies and build
         run: |
-          npm install --legacy-peer-deps
-          if [ -f "scripts/prepare-pages.mjs" ]; then
-            node scripts/prepare-pages.mjs || true
-          fi
-          if [ -f "vite.pages.ts" ]; then
-            npx vite build --config vite.pages.ts --base=./
-          else
-            npx vite build --base=./
-          fi
+          bun install || npm install --legacy-peer-deps
+          bun run build || npx vite build
+          
+          # Prepare the output directory for GitHub Pages
           mkdir -p dist_pages
-          if [ -f "dist/index.html" ]; then
-            cp -r dist/* dist_pages/
-          elif [ -f "dist/static/index.html" ]; then
-            cp -r dist/static/* dist_pages/
-            cp -r dist/assets dist_pages/ 2>/dev/null || true
-          elif [ -d ".output/public" ]; then
+          
+          if [ -d ".output/public" ]; then
             cp -r .output/public/* dist_pages/
+          elif [ -d "dist" ]; then
+            cp -r dist/* dist_pages/
           fi
+          
+          # Ensure 404.html exists for SPA routing
           if [ -f "dist_pages/index.html" ]; then
             cp dist_pages/index.html dist_pages/404.html
           fi
